@@ -14,7 +14,7 @@ class Form extends Component
 {
  use WithFileUploads;
     public $name;
-    public $position;
+    // public $position;
     public $content;
     public $image;
     public $is_edit;
@@ -38,7 +38,7 @@ class Form extends Component
         $testimonys = $this->is_edit ? Testimony::find($this->id) : new Testimony();
 
         $testimonys->name = $this->name;
-        $testimonys->position = $this->position;
+        // $testimonys->position = $this->position;
 
         $testimonys->content = $this->content;
       
@@ -70,7 +70,7 @@ class Form extends Component
         $this->openModal = true;
 
         $this->name  = $testimony->name;
-        $this->position  = $testimony->position;
+        // $this->position  = $testimony->position;
 
         $this->content = $testimony->content;
         $this->is_edit = true;
