@@ -1,4 +1,4 @@
-<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
+<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 z-0 fixed-start ms-3 " id="sidenav-main">
 
 
     <div id="sidebar-container" class="z-999 md:z-0">
@@ -93,21 +93,7 @@
                     <span class="nav-link-text ms-1">Sliders</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link <?php echo e(Route::currentRouteName() == 'packages' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>"
-                    wire:navigate href="<?php echo e(route('packages')); ?>">
-                    <div
-                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <svg
-                            class="<?php echo e(request()->routeIs('slider') ? 'text-white' : 'text-dark'); ?>"
-                            style="width: 24px; height: 24px; <?php echo e(request()->routeIs('packages') ? 'fill:black;' : 'fill: black;'); ?>"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                            <path d="M216 64c-13.3 0-24 10.7-24 24s10.7 24 24 24l16 0 0 33.3C119.6 157.2 32 252.4 32 368l448 0c0-115.6-87.6-210.8-200-222.7l0-33.3 16 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-40 0-40 0zM24 400c-13.3 0-24 10.7-24 24s10.7 24 24 24l464 0c13.3 0 24-10.7 24-24s-10.7-24-24-24L24 400z" />
-                        </svg>
-                    </div>
-                    <span class="nav-link-text ms-1">Packages</span>
-                </a>
-            </li>
+            
         
             <li class="nav-item">
                 <a class="nav-link <?php echo e(Route::currentRouteName() == 'contact' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>"

@@ -1,4 +1,4 @@
-<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
+<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 z-0 fixed-start ms-3 " id="sidenav-main">
 
 
     <div id="sidebar-container" class="z-999 md:z-0">
@@ -93,7 +93,7 @@
                     <span class="nav-link-text ms-1">Sliders</span>
                 </a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link {{ Route::currentRouteName() == 'packages' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : '' }}"
                     wire:navigate href="{{ route('packages') }}">
                     <div
@@ -107,7 +107,7 @@
                     </div>
                     <span class="nav-link-text ms-1">Packages</span>
                 </a>
-            </li>
+            </li> --}}
         
             <li class="nav-item">
                 <a class="nav-link {{ Route::currentRouteName() == 'contact' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : '' }}"
