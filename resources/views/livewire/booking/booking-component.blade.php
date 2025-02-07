@@ -1,6 +1,13 @@
 <div class="main-content">
     <div class="row">
         <div class="col-12">
+            <!-- Export Buttons -->
+            <div class="d-flex justify-content-end mb-3 mx-4">
+           
+                <a href="{{ route('bookings.export.pdf') }}" class="btn btn-danger">
+                    Export to PDF
+                </a>
+            </div>
 
             <div class="card mb-4 mx-4">
                 <div class="card-header pb-0">
@@ -34,9 +41,7 @@
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         People Count
                                     </th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        Place
-                                    </th>
+                                 
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Tour Code
                                     </th>
@@ -46,28 +51,24 @@
                                 @foreach ( $bookings as $booking )
                                 <tr>
                                     <td class="ps-4">
-                                        <p class="text-xs font-weight-bold mb-0">{{$booking->id}}</p>
+                                        <p class="text-xs font-weight-bold mb-0">{{ $booking->id }}</p>
                                     </td>
                                     <td class="">
-                                        <p class="text-xs font-weight-bold mb-0">{{$booking->name}}</p>
+                                        <p class="text-xs font-weight-bold mb-0">{{ $booking->name }}</p>
                                     </td>
                                     <td class="text-center">
-                                        <p class="text-xs font-weight-bold mb-0">{{$booking->email}}</p>
+                                        <p class="text-xs font-weight-bold mb-0">{{ $booking->email }}</p>
                                     </td>
                                     <td class="text-center">
-                                        <p class="text-xs font-weight-bold mb-0">{{$booking->date}}</p>
+                                        <p class="text-xs font-weight-bold mb-0">{{ $booking->date }}</p>
                                     </td>
                                     <td class="text-center">
-                                        <p class="text-xs font-weight-bold mb-0">{{$booking->members}}</p>
+                                        <p class="text-xs font-weight-bold mb-0">{{ $booking->members }}</p>
                                     </td>
+                                 
                                     <td class="text-center">
-                                        <p class="text-xs font-weight-bold mb-0">{{$booking->place}}</p>
+                                        <p class="text-xs font-weight-bold mb-0">{{ $booking->TourCode }}</p>
                                     </td>
-                                    <td class="text-center">
-                                        <p class="text-xs font-weight-bold mb-0">{{$booking->TourCode}}</p>
-                                    </td>
-
-
                                 </tr>
                                 @endforeach
                             </tbody>

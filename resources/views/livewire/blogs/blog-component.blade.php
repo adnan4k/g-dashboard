@@ -10,7 +10,7 @@
                             <h5 class="mb-0">All Blogs</h5>
                         </div>
                         <button
-                            @click="$dispatch('blogModal')"
+                            wire:click="$dispatch('blogModal')"
                             class="btn bg-[#56C596] text-white btn-sm mb-0"
                             type="button">+&nbsp; New Blog</button>
                     </div>

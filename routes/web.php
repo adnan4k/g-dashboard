@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingExportController;
 use App\Http\Livewire\Packages\PackageComponent;
 use Illuminate\Support\Facades\Route;
 
@@ -101,6 +102,14 @@ Route::middleware('auth')->group(function () {
     Route::get('subscription',SubscriptionController::class)->name('subscription');
     Route::get('/schedule',ScheduleComponent::class)->name('schedule');
     Route::get('tour',TourComponent::class)->name('tour');
+    
+Route::get('/bookings/export/excel', [BookingExportController::class, 'exportExcel'])->name('bookings.export.excel');
+Route::get('/export-bookings-pdf', [BookingExportController::class, 'exportBookingsPDF'])->name('bookings.export.pdf');
+Route::post('/logout', function () {
+    auth()->logout();
+    return redirect('/login');
+})->name('logout');
+
 
 });
 

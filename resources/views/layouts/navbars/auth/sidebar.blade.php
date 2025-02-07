@@ -35,7 +35,7 @@
 
 
 
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a wire:navigate class="nav-link {{ Route::currentRouteName() == 'category' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : '' }}"
                     href="{{ route('category') }}">
                     <div
@@ -62,7 +62,7 @@
                     </div>
                     <span class="nav-link-text ms-1">Category</span>
                 </a>
-            </li>
+            </li> --}}
             <li class="nav-item">
                 <a class="nav-link {{ Route::currentRouteName() == 'blogs' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : '' }}"
                     wire:navigate href="{{ route('blogs') }}">
@@ -245,7 +245,25 @@
                     <span class="nav-link-text ms-1">Schedules</span>
                 </a>
             </li>
-
+        <li class="nav-item">
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="nav-link d-flex align-items-center" style="background: none; border: none; width: 100%; text-align: left;">
+                    <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <svg
+                            class="text-dark"
+                            style="width: 24px; height: 24px;"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1m0-8V5" />
+                        </svg>
+                    </div>
+                    <span class="nav-link-text ms-1">Logout</span>
+                </button>
+            </form>
+        </li>
         </ul>
     </div>
 

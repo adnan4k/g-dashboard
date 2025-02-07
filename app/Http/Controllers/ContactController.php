@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactCreated;
 use App\Models\Contact;
 use App\Models\Subscription;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -23,7 +25,10 @@ class ContactController extends Controller
         $contact->type = 'contact';
         $contact->save();
 
+        $adminEmails = ['admin1@example.com', 'admin2@example.com'];
+        Mail::to($adminEmails)->send(new ContactCreated($contact));
 
+        
         return response()->json([
             'success' => true,
             'message' => 'Thank you for contacting us!',
