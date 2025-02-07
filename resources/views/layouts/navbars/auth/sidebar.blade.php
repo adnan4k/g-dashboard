@@ -63,7 +63,7 @@
                     <span class="nav-link-text ms-1">Category</span>
                 </a>
             </li> --}}
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link {{ Route::currentRouteName() == 'blogs' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : '' }}"
                     wire:navigate href="{{ route('blogs') }}">
                     <div
@@ -77,7 +77,7 @@
                     </div>
                     <span class="nav-link-text ms-1">Blog</span>
                 </a>
-            </li>
+            </li> --}}
             <li class="nav-item">
                 <a class="nav-link {{ Route::currentRouteName() == 'sliders' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : '' }}"
                     wire:navigate href="{{ route('sliders') }}">
