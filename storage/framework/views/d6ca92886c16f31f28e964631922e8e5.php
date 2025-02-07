@@ -67,15 +67,18 @@
     <script src="assets/js/core/bootstrap.min.js"></script>
     <script src="assets/js/plugins/smooth-scrollbar.min.js"></script>
     <script>
-       
         document.addEventListener("DOMContentLoaded", () => {
             const toggleButton = document.getElementById("iconNavbarSidenav");
             const sidenav = document.getElementById("sidebar-container");
-        console.log('here is me faya',sidenav)
+            
+            if (!toggleButton || !sidenav) {
+                console.warn("Toggle button or sidebar container not found.");
+                return;
+            }
+            
             toggleButton.addEventListener("click", () => {
-                console.log('clicked here')
-                // Toggle a class to show/hide the sidebar
-               console.log(sidenav.classList.toggle("hidden"));
+                // Toggle the "hidden" class on the sidebar to show/hide it.
+                sidenav.classList.toggle("hidden");
             });
         });
     </script>
