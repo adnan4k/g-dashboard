@@ -1,0 +1,1 @@
+<?php /**PATH C:\Users\Administrator\Desktop\apps\g-dashboard\resources\views/layouts/footers/auth/footer.blade.php ENDPATH**/ ?>

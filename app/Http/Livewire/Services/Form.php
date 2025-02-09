@@ -28,8 +28,8 @@ class Form extends Component
     }
     protected $rules = [
         'title' => 'required|string|max:255',
-        'description' => 'required|string',
-        'image' => 'required',
+        'description' => 'nullable',
+        'image' => 'nullable',
     ];
     public function save()
     {

@@ -22,7 +22,7 @@ class BookingController extends Controller
         $booking->TourCode = $request->TourCode;
         $booking->time = $request->time;
         $booking->save();
-        $adminEmails = ['jemmavalleytours@gmail.com', 'info@jemmavalleytour.com']; // Replace with the admin emails
+        $adminEmails = ['wendwesentadesse117@gmail.com', 'info@gracelandethiopiatours.com']; // Replace with the admin emails
         Mail::to($adminEmails)->send(new BookingCreated($booking));
         return response()->json(['message' => 'Booking created!'], 201);
     }
