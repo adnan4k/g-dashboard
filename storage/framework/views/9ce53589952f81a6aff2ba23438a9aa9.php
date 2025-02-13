@@ -1,8 +1,8 @@
-<div x-data="{ openModal: @entangle('openModal') }" class="flex justify-center px-8">
+<div x-data="{ openModal: <?php if ((object) ('openModal') instanceof \Livewire\WireDirective) : ?>window.Livewire.find('<?php echo e($__livewire->getId()); ?>').entangle('<?php echo e('openModal'->value()); ?>')<?php echo e('openModal'->hasModifier('live') ? '.live' : ''); ?><?php else : ?>window.Livewire.find('<?php echo e($__livewire->getId()); ?>').entangle('<?php echo e('openModal'); ?>')<?php endif; ?> }" class="flex justify-center px-8">
 
     <div x-cloak x-show="openModal" id="default-modal" tabindex="-1" aria-hidden="true"
         class="fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-50 overflow-y-auto">
-        <div x-data="{ isEdit: @entangle('is_edit') }" class="relative p-4 w-full max-w-2xl max-h-full">
+        <div x-data="{ isEdit: <?php if ((object) ('is_edit') instanceof \Livewire\WireDirective) : ?>window.Livewire.find('<?php echo e($__livewire->getId()); ?>').entangle('<?php echo e('is_edit'->value()); ?>')<?php echo e('is_edit'->hasModifier('live') ? '.live' : ''); ?><?php else : ?>window.Livewire.find('<?php echo e($__livewire->getId()); ?>').entangle('<?php echo e('is_edit'); ?>')<?php endif; ?> }" class="relative p-4 w-full max-w-2xl max-h-full">
             <form class="relative bg-white rounded-lg shadow dark:bg-gray-700" wire:submit.prevent="save">
                 <div class="flex flex-wrap border shadow rounded-lg p-3 dark:bg-gray-600">
                     <div>
@@ -20,13 +20,20 @@
                             <label class="text-gray-600 dark:text-gray-400">
                                 Title
                             </label>
-                            <input value="{{ $title ?? null }}" wire:model="title"
+                            <input value="<?php echo e($title ?? null); ?>" wire:model="title"
                                 class="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow dark:bg-gray-600 dark:text-gray-100"
                                 type="text">
                             <div>
-                                @error('title')
-                                    <span class="text-red-500">{{ $message }}</span>
-                                @enderror
+                                <!--[if BLOCK]><![endif]--><?php $__errorArgs = ['title'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                                    <span class="text-red-500"><?php echo e($message); ?></span>
+                                <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
                             </div>
 
                         </div>
@@ -49,7 +56,7 @@
                         </div>
 
                         <!-- Conditional Tour Code Field -->
-                        <div x-data="{ show: @entangle('type').defer === 'package' }"
+                        <div x-data="{ show: <?php if ((object) ('type') instanceof \Livewire\WireDirective) : ?>window.Livewire.find('<?php echo e($__livewire->getId()); ?>').entangle('<?php echo e('type'->value()); ?>')<?php echo e('type'->hasModifier('live') ? '.live' : ''); ?><?php else : ?>window.Livewire.find('<?php echo e($__livewire->getId()); ?>').entangle('<?php echo e('type'); ?>')<?php endif; ?>.defer === 'package' }"
                             x-on:type-changed.window="show = $event.detail.value === 'package'">
                             <template x-if="show">
                                 <div class="mt-4">
@@ -60,18 +67,32 @@
                                         class="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow dark:bg-gray-600 dark:text-gray-100"
                                         type="text">
                                     <div>
-                                        @error('code')
-                                            <span class="text-red-500">{{ $message }}</span>
-                                        @enderror
+                                        <!--[if BLOCK]><![endif]--><?php $__errorArgs = ['code'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                                            <span class="text-red-500"><?php echo e($message); ?></span>
+                                        <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
                                     </div>
                                 </div>
                             </template>
                         </div>
 
                         <div>
-                            @error('type')
-                                <span class="text-red-500">{{ $message }}</span>
-                            @enderror
+                            <!--[if BLOCK]><![endif]--><?php $__errorArgs = ['type'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                                <span class="text-red-500"><?php echo e($message); ?></span>
+                            <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
                         </div>
 
 
@@ -82,13 +103,20 @@
                             <label class="text-gray-600 dark:text-gray-400">
                                 Image
                             </label>
-                            <input value="{{ $image ?? null }}" wire:model="image"
+                            <input value="<?php echo e($image ?? null); ?>" wire:model="image"
                                 class="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow dark:bg-gray-600 dark:text-gray-100"
                                 type="file">
                             <div>
-                                @error('image')
-                                    <span class="text-red-500">{{ $message }}</span>
-                                @enderror
+                                <!--[if BLOCK]><![endif]--><?php $__errorArgs = ['image'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                                    <span class="text-red-500"><?php echo e($message); ?></span>
+                                <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
                             </div>
 
                         </div>
@@ -98,9 +126,16 @@
                                 class="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow dark:bg-gray-600 dark:text-gray-100"
                                 wire:model="content"></textarea>
                             <div>
-                                @error('content')
-                                    <span class="text-red-500">{{ $message }}</span>
-                                @enderror
+                                <!--[if BLOCK]><![endif]--><?php $__errorArgs = ['content'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                                    <span class="text-red-500"><?php echo e($message); ?></span>
+                                <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
                             </div>
                         </div>
 
@@ -120,9 +155,12 @@
             </form>
         </div>
     </div>
-    @script
+        <?php
+        $__scriptKey = '3723956706-0';
+        ob_start();
+    ?>
         <script>
-            const existingContent = @json($content); // Replace $content with the actual content variable from your backend
+            const existingContent = <?php echo json_encode($content, 15, 512) ?>; // Replace $content with the actual content variable from your backend
 
             // Initialize SimpleMDE
             const simplemde = new SimpleMDE({
@@ -134,5 +172,10 @@
                 // console.log(simplemde.value());
             });
         </script>
-    @endscript
+        <?php
+        $__output = ob_get_clean();
+
+        \Livewire\store($this)->push('scripts', $__output, $__scriptKey)
+    ?>
 </div>
+<?php /**PATH C:\Users\Administrator\Desktop\apps\g-dashboard\resources\views/livewire/sections/form.blade.php ENDPATH**/ ?>

@@ -50,6 +50,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     Route::get('destination-detail/{id}', [SectionController::class, 'getDestinationDetail']);
     Route::get('hero-slider', [SectionController::class, 'getHeroSlider']);
     Route::get('slider-section', [SectionController::class, 'getSliderSection']);
+    Route::get('gallery', [GeneralController::class, 'gallery']);
     // Route::get('tou-detail/{id}', [SectionController::class, 'getPackageDetail']);
 
 

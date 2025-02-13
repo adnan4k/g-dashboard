@@ -19,6 +19,7 @@ use App\Http\Livewire\Categories\CategoryComponent;
 use App\Http\Livewire\Categories\Form as CategoriesForm;
 use App\Http\Livewire\Contact\ContactComponent;
 use App\Http\Livewire\Contact\PartnershipComponent;
+use App\Http\Livewire\Gallery\GalleryComponent;
 use App\Http\Livewire\Profile;
 use App\Http\Livewire\Tables;
 use App\Http\Livewire\StaticSignIn;
@@ -70,7 +71,7 @@ Route::middleware('auth')->group(function () {
     Route::get('packages',PackageComponent::class)->name('packages');
     Route::get('sections',SectionComponent::class)->name('sections');
     Route::get('booking',BookingComponent::class)->name('booking');
-
+    Route::get('gallery',GalleryComponent::class)->name('gallery');
     Route::get('testimonials',TestimonyComponent::class)->name('testimonials');
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
     Route::get('/billing', Billing::class)->name('billing');

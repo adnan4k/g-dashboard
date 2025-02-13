@@ -36,8 +36,7 @@
 
 
 
-            
-            
+      
             <li class="nav-item">
                 <a class="nav-link <?php echo e(Route::currentRouteName() == 'sliders' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>"
                     wire:navigate href="<?php echo e(route('sliders')); ?>">
@@ -93,8 +92,22 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link <?php echo e(Route::currentRouteName() == 'gallery' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>"
+                    wire:navigate href="<?php echo e(route('gallery')); ?>">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-images <?php echo e(request()->routeIs('gallery') ? 'text-dark' : 'text-dark'); ?>" style="font-size: 24px;"></i>
+
+
+                    </div>
+                    <span class="nav-link-text ms-1">Gallery</span>
+                </a>
+            </li>
+            
+            <li class="nav-item">
                 <a class="nav-link <?php echo e(Route::currentRouteName() == 'booking' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>"
                     wire:navigate href="<?php echo e(route('booking')); ?>">
+
                     <div
                         class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
 
@@ -204,7 +217,8 @@
 
 <!-- Mobile Sidebar -->
 <!-- Mobile Sidebar -->
-<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 z-0 fixed-start ms-3" id="mobile-sidebar">
+<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 z-0 fixed-start ms-3"
+    id="mobile-sidebar">
     <!-- Sidebar Header -->
     <div class="sidenav-header d-flex align-items-center justify-content-between p-3">
         <span class="navbar-brand font-weight-bold">Menu</span>
@@ -218,8 +232,10 @@
         <ul id="navbar-nav" class="navbar-nav">
             <!-- Dashboard -->
             <li class="nav-item pb-2">
-                <a class="nav-link <?php echo e(Route::currentRouteName() == 'dashboard' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>" wire:navigate href="<?php echo e(route('dashboard')); ?>">
-                    <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                <a class="nav-link <?php echo e(Route::currentRouteName() == 'dashboard' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>"
+                    wire:navigate href="<?php echo e(route('dashboard')); ?>">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                         <svg width="12px" height="12px" viewBox="0 0 45 40" xmlns="http://www.w3.org/2000/svg">
                             <path d="M46.7199583,10.7414583 L40.8449583,0.949791667..." />
                         </svg>
@@ -230,8 +246,10 @@
 
             <!-- Sliders -->
             <li class="nav-item">
-                <a class="nav-link <?php echo e(Route::currentRouteName() == 'sliders' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>" wire:navigate href="<?php echo e(route('sliders')); ?>">
-                    <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                <a class="nav-link <?php echo e(Route::currentRouteName() == 'sliders' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>"
+                    wire:navigate href="<?php echo e(route('sliders')); ?>">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                         <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path d="M216 64c-13.3 0-24 10.7-24 24s10.7 24 24 24l16 0 0 33.3..." />
                         </svg>
@@ -242,8 +260,10 @@
 
             <!-- Contact -->
             <li class="nav-item">
-                <a class="nav-link <?php echo e(Route::currentRouteName() == 'contact' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>" wire:navigate href="<?php echo e(route('contact')); ?>">
-                    <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                <a class="nav-link <?php echo e(Route::currentRouteName() == 'contact' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>"
+                    wire:navigate href="<?php echo e(route('contact')); ?>">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                         <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path d="M96 0C60.7 0 32 28.7 32 64l0 384c0 35.3 28.7 64 64 64l288..." />
                         </svg>
@@ -254,8 +274,10 @@
 
             <!-- Testimonials -->
             <li class="nav-item">
-                <a class="nav-link <?php echo e(Route::currentRouteName() == 'testimonials' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>" wire:navigate href="<?php echo e(route('testimonials')); ?>">
-                    <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                <a class="nav-link <?php echo e(Route::currentRouteName() == 'testimonials' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>"
+                    wire:navigate href="<?php echo e(route('testimonials')); ?>">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                         <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path d="M96 0C60.7 0 32 28.7 32 64l0 384c0 35.3 28.7 64 64 64l288..." />
                         </svg>
@@ -266,8 +288,10 @@
 
             <!-- Booking -->
             <li class="nav-item">
-                <a class="nav-link <?php echo e(Route::currentRouteName() == 'booking' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>" wire:navigate href="<?php echo e(route('booking')); ?>">
-                    <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                <a class="nav-link <?php echo e(Route::currentRouteName() == 'booking' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>"
+                    wire:navigate href="<?php echo e(route('booking')); ?>">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                         <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path d="M96 0C60.7 0 32 28.7 32 64l0 384c0 35.3 28.7 64 64 64l288..." />
                         </svg>
@@ -278,8 +302,10 @@
 
             <!-- Sections -->
             <li class="nav-item">
-                <a class="nav-link <?php echo e(Route::currentRouteName() == 'sections' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>" wire:navigate href="<?php echo e(route('sections')); ?>">
-                    <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                <a class="nav-link <?php echo e(Route::currentRouteName() == 'sections' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>"
+                    wire:navigate href="<?php echo e(route('sections')); ?>">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                         <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path d="M96 0C60.7 0 32 28.7 32 64l0 384c0 35.3 28.7 64 64 64l288..." />
                         </svg>
@@ -290,8 +316,10 @@
 
             <!-- Subscriptions -->
             <li class="nav-item">
-                <a class="nav-link <?php echo e(Route::currentRouteName() == 'subscription' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>" wire:navigate href="<?php echo e(route('subscription')); ?>">
-                    <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                <a class="nav-link <?php echo e(Route::currentRouteName() == 'subscription' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>"
+                    wire:navigate href="<?php echo e(route('subscription')); ?>">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                         <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path d="M96 0C60.7 0 32 28.7 32 64l0 384c0 35.3 28.7 64 64 64l288..." />
                         </svg>
@@ -304,10 +332,14 @@
             <li class="nav-item">
                 <form method="POST" action="<?php echo e(route('logout')); ?>">
                     <?php echo csrf_field(); ?>
-                    <button type="submit" class="nav-link d-flex align-items-center" style="background: none; border: none; width: 100%; text-align: left;">
-                        <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                            <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1m0-8V5" />
+                    <button type="submit" class="nav-link d-flex align-items-center"
+                        style="background: none; border: none; width: 100%; text-align: left;">
+                        <div
+                            class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1m0-8V5" />
                             </svg>
                         </div>
                         <span class="nav-link-text ms-1">Logout</span>
@@ -319,8 +351,8 @@
 </aside>
 
 
-            <!-- Sections -->
-            
+<!-- Sections -->
+
 
 
 <!-- Main Content -->
@@ -337,73 +369,73 @@
 
 <style>
     /* Mobile Sidebar */
-#mobile-sidebar {
-    width: 250px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -250px;
-    transition: left 0.3s ease;
-    background-color: white;
-    z-index: 1000;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-}
+    #mobile-sidebar {
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -250px;
+        transition: left 0.3s ease;
+        background-color: white;
+        z-index: 1000;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
 
-#mobile-sidebar.open {
-    left: 0;
-}
+    #mobile-sidebar.open {
+        left: 0;
+    }
 
-.sidenav-header {
-    padding: 1rem;
-    border-bottom: 1px solid #e9ecef;
-}
+    .sidenav-header {
+        padding: 1rem;
+        border-bottom: 1px solid #e9ecef;
+    }
 
-#close-sidebar {
-    font-size: 1.5rem;
-    color: #000;
-}
+    #close-sidebar {
+        font-size: 1.5rem;
+        color: #000;
+    }
 
-/* Overlay for when sidebar is open */
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-}
+    /* Overlay for when sidebar is open */
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
 
-.overlay.active {
-    display: block;
-}
+    .overlay.active {
+        display: block;
+    }
 </style>
 
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const sidebar = document.getElementById('mobile-sidebar');
-    const openButton = document.getElementById('iconNavbarSidenav');
-    const closeButton = document.getElementById('close-sidebar');
-    const overlay = document.createElement('div');
-    overlay.classList.add('overlay');
-    document.body.appendChild(overlay);
+    document.addEventListener('DOMContentLoaded', function() {
+        const sidebar = document.getElementById('mobile-sidebar');
+        const openButton = document.getElementById('iconNavbarSidenav');
+        const closeButton = document.getElementById('close-sidebar');
+        const overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+        document.body.appendChild(overlay);
 
-    openButton.addEventListener('click', function() {
-        sidebar.classList.add('open');
-        overlay.classList.add('active');
-    });
+        openButton.addEventListener('click', function() {
+            sidebar.classList.add('open');
+            overlay.classList.add('active');
+        });
 
-    closeButton.addEventListener('click', function() {
-        sidebar.classList.remove('open');
-        overlay.classList.remove('active');
-    });
+        closeButton.addEventListener('click', function() {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+        });
 
-    overlay.addEventListener('click', function() {
-        sidebar.classList.remove('open');
-        overlay.classList.remove('active');
+        overlay.addEventListener('click', function() {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+        });
     });
-});
 </script>
 <?php /**PATH C:\Users\Administrator\Desktop\apps\g-dashboard\resources\views/layouts/navbars/auth/sidebar.blade.php ENDPATH**/ ?>

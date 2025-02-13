@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Biography;
 use App\Models\Blog;
+use App\Models\Gallery;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -16,6 +17,11 @@ class GeneralController extends Controller
         $articles = Service::latest()->get();
         return response()->json($articles);
     }
+    public function gallery(){
+        $galleries = Gallery::all();
+        Log::info($galleries);
+        return response()->json($galleries);
+     }
     public function blogs()
     {
         $blogs = Blog::with('category')->latest()->get();
