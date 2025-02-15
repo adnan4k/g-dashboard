@@ -43,6 +43,7 @@ use App\Http\Livewire\Services\ServiceComponent;
 use App\Http\Livewire\Subscription\SubscriptionController;
 use App\Http\Livewire\Testimony\TestimonyComponent;
 use App\Http\Livewire\Tour\TourComponent;
+use App\Http\Livewire\Video\VideoComponent;
 use Illuminate\Http\Request;
 
 /*
@@ -103,6 +104,7 @@ Route::middleware('auth')->group(function () {
     Route::get('subscription',SubscriptionController::class)->name('subscription');
     Route::get('/schedule',ScheduleComponent::class)->name('schedule');
     Route::get('tour',TourComponent::class)->name('tour');
+    Route::get('videos',VideoComponent::class)->name('videos');
     
 Route::get('/bookings/export/excel', [BookingExportController::class, 'exportExcel'])->name('bookings.export.excel');
 Route::get('/export-bookings-pdf', [BookingExportController::class, 'exportBookingsPDF'])->name('bookings.export.pdf');

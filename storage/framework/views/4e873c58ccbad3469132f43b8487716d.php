@@ -257,6 +257,19 @@
                     <span class="nav-link-text ms-1">Sliders</span>
                 </a>
             </li>
+                  <!-- Sliders -->
+                  <li class="nav-item">
+                    <a class="nav-link <?php echo e(Route::currentRouteName() == 'sliders' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>"
+                        wire:navigate href="<?php echo e(route('sliders')); ?>">
+                        <div
+                            class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M216 64c-13.3 0-24 10.7-24 24s10.7 24 24 24l16 0 0 33.3..." />
+                            </svg>
+                        </div>
+                        <span class="nav-link-text ms-1">Sliders</span>
+                    </a>
+                </li>
 
             <!-- Contact -->
             <li class="nav-item">
@@ -327,6 +340,32 @@
                     <span class="nav-link-text ms-1">Subscriptions</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link <?php echo e(Route::currentRouteName() == 'subscription' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>"
+                    wire:navigate href="<?php echo e(route('subscription')); ?>">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M96 0C60.7 0 32 28.7 32 64l0 384c0 35.3 28.7 64 64 64l288..." />
+                        </svg>
+                    </div>
+                    <span class="nav-link-text ms-1">Subscriptions</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <?php echo e(Route::currentRouteName() == 'videos' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : ''); ?>"
+                    wire:navigate href="<?php echo e(route('videos')); ?>">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M96 0C60.7 0 32 28.7 32 64l0 384c0 35.3 28.7 64 64 64l288..." />
+                        </svg>
+                    </div>
+                    <span class="nav-link-text ms-1">Videos</span>
+                </a>
+            </li>
+
+
 
             <!-- Logout -->
             <li class="nav-item">
