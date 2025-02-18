@@ -1,4 +1,4 @@
-<aside id="mobile-sidenav" class="fixed inset-y-0 left-0 z-50 w-64 transform -translate-x-full bg-white shadow-lg transition-transform duration-300 ease-in-out">
+{{-- <aside id="mobile-sidenav" class="fixed inset-y-0 left-0 z-50 w-64 transform -translate-x-full bg-white shadow-lg transition-transform duration-300 ease-in-out">
     <!-- Mobile Sidebar Header -->
     <div class="flex items-center justify-between p-4 bg-gray-800">
         <h2 class="text-lg font-bold text-white">Menu</h2>
@@ -169,7 +169,18 @@
                     <span class="flex-1">Schedules</span>
                 </a>
             </li>
-
+            <li class="nav-item">
+                <a class="nav-link {{ Route::currentRouteName() == 'videos' ? 'bg-[#56C596] text-white font-bold rounded-2xl' : '' }}"
+                    wire:navigate href="{{ route('videos') }}">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M96 0C60.7 0 32 28.7 32 64l0 384c0 35.3 28.7 64 64 64l288..." />
+                        </svg>
+                    </div>
+                    <span class="nav-link-text ms-1">Videos</span>
+                </a>
+            </li>
             <!-- Logout Nav Item -->
             <li class="mt-4">
                 <form method="POST" action="{{ route('logout') }}">
@@ -204,4 +215,4 @@
     function openMobileSidebar() {
         mobileSidenav.classList.remove('-translate-x-full');
     }
-</script>
+</script> --}}

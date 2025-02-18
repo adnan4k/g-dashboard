@@ -7,6 +7,7 @@ use Livewire\WithFileUploads;
 use App\Models\Video;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\UploadedFile;
+use Livewire\Attributes\On;
 use Masmerise\Toaster\Toaster as ToasterToaster;
 
 class Form extends Component
@@ -46,7 +47,7 @@ class Form extends Component
             if ($this->is_edit && $video->image) {
                 Storage::delete($video->image);
             }
-
+        // dd($this->image);
             // Store new image
             $path = $this->image->store('videos', 'public');
             $video->image = $path;
@@ -63,7 +64,7 @@ class Form extends Component
         $this->reset();
         $this->dispatch('refreshTable');
     }
-
+    #[On('edit-video')]
     public function edit(Video $video)
     {
         $this->openModal = true;
